@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "main.css",
+	"sources": [
+		"main.scss",
+		"_sass/main.scss"
+	],
+	"sourcesContent": [
+		"@import \"main\";\n",
+		"@import url('https://fonts.googleapis.com/css?family=Open+Sans|Space+Mono&display=swap');\n\n$backgroundColor: #ffffff;\n$bodyColor: #000000;\n$bodyFont: 'Space Mono', monospace;\n$linkFont: 'Open Sans', sans-serif;\n\nbody {\n  background: $backgroundColor;\n  color: $bodyColor;\n  font-family: $bodyFont;\n}\n\na {\n  font-family: $linkFont;\n}\n"
+	],
+	"names": [],
+	"mappings": "ACAA,OAAO,CAAC,gFAAI;AAOZ,AAAA,IAAI,CAAC,EACH,UAAU,EANM,OAAO,EAOvB,KAAK,EANK,OAAO,EAOjB,WAAW,EANF,YAAY,EAAE,SAAS,GAOjC;;AAED,AAAA,CAAC,CAAC,EACA,WAAW,EATF,WAAW,EAAE,UAAU,GAUjC"
+}

@@ -1,3 +1,25 @@
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "" # the name of your site, e.g. ACME Corp.
+# Jekyll main configuration file
+# See https://jekyllrb.com/docs/configuration/ to further customize this file
+# Defaults settings https://jekyllrb.com/docs/configuration/#default-configuration
+
+title: Thomas Rayden
+description: I tell computers to do things
+
+# url: # (optional) https://example.com, defaults to http://localhost:4000 in development
+
+permalink: date # how your URLs are built, see https://jekyllrb.com/docs/permalinks/#builtinpermalinkstyles
+
+timezone: Australia/Perth # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+# theme: minima 
+# look for themes on https://github.com/topics/jekyll-theme and https://rubygems.org/search?utf8=%E2%9C%93&query=jekyll-theme
+
+# Files to excludes from your website
+# exclude:  
+# - .gitignore
+# - CNAME 
+
+url: 'https://tom.rayden.co' # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: '/' # the subpath of your site, e.g. /blog
+title: 'Thomas Rayden' # the name of your site, e.g. ACME Corp.
+

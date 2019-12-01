@@ -4,4 +4,4 @@ layout: default
 
 # Thomas Rayden
 
-[My Work]({% link work/index.md %})
+## My Work
