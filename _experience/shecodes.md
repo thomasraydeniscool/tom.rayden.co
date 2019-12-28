@@ -1,0 +1,7 @@
+- React
+- Python
+- Django
+- HTML
+- CSS
+- SCRUM
+- Agile

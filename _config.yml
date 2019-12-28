@@ -23,3 +23,6 @@ url: 'https://tom.rayden.co' # the base hostname & protocol for your site, e.g. 
 baseurl: '/' # the subpath of your site, e.g. /blog
 title: 'Thomas Rayden' # the name of your site, e.g. ACME Corp.
 
+collections:
+  - languages
+  - experience

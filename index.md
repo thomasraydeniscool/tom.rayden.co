@@ -1,11 +1,11 @@
 ---
 layout: default
 title: Thomas Rayden
-subtitle: Welcome, what would you like to see?
+subtitle: Welcome to my realm...
 ---
 
-- [My Experience]({% link work/index.md %}){:.emphasis}
-- [My Projects]({% link work/projects.md %}){:.emphasis}
+- [My Resume]({% link resume.md %}){:.emphasis}
+- [My Projects]({% link projects.md %}){:.emphasis}
 - [About Me]({% link about.md %})
 - [Contact]({% link contact.md %})
 
