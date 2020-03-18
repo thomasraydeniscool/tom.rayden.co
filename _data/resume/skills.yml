@@ -1,0 +1,159 @@
+languages:
+  - typescript:
+    name: Typescript
+    level: 10
+  - python:
+    name: Python
+    level: 4
+  - java:
+    name: Java
+    level: 5
+  - rust:
+    name: Rust
+    level: 4
+  - go:
+    name: Go
+    level: 3
+  - csharp:
+    name: C#
+    level: 3
+  - php:
+    name: PHP
+    level: 5
+  - json:
+    name: JSON
+    level: 10
+  - yaml:
+    name: YAML
+    level: 6
+  - sass:
+    name: Sass
+    level: 10
+  - html:
+    name: HTML
+    level: 10
+  - markdown:
+    name: Markdown
+    level: 10
+
+frameworks:
+  - node:
+    name: Node
+    level: 10
+  - vue:
+    name: Vue
+    level: 10
+  - nuxt:
+    name: Nuxt
+    level: 9
+  - react:
+    name: React
+    level: 7
+  - angular:
+    name: Angular
+    level: 8
+  - express:
+    name: Express
+    level: 10
+  - fastify:
+    name: Fastify
+    level: 7
+  - electron:
+    name: Electron
+    level: 10
+  - jekyll:
+    name: Jekyll
+    level: 6
+  - django:
+    name: Django
+    level: 4
+  - wordpress:
+    name: Wordpress
+    level: 6
+
+infrastructure:
+  - git:
+    name: Git
+    level: 10
+  - mongodb:
+    name: MongoDB
+    level: 10
+  - docker:
+    name: Docker
+    level: 5
+  - lambda:
+    name: Lambda
+    level: 5
+  - s3:
+    name: S3
+    level: 9
+  - redisdb:
+    name: RedisDB
+    level: 3
+  - dynamodb:
+    name: DynamoDB
+    level: 3
+  - postgresql:
+    name: PostgreSQL
+    level: 1
+
+services:
+  - heroku:
+    name: Heroku
+    level: 10
+  - twillio:
+    name: Twillio
+    level: 10
+  - sendgrid:
+    name: Sendgrid
+    level: 8
+  - auth0:
+    name: Auth0
+    level: 8
+  - sentry:
+    name: Sentry
+    level: 9
+  - github:
+    name: Github
+    level: 10
+
+standards:
+  - rest:
+    name: REST
+    level: 10
+  - graphql:
+    name: GraphQL
+    level: 7
+  - oauth:
+    name: OAuth & OpenID Connect
+    level: 9
+  - openapi:
+    name: OpenAPI
+    level: 8
+
+integrations:
+  - xero:
+    name: Xero
+    level: 7
+  - myob:
+    name: MYOB
+    level: 6
+
+systems:
+  - bash:
+    name: Bash
+    level: 5
+  - ssh:
+    name: ssh
+    level: 7
+  - linux:
+    name: Linux
+    level: 8
+
+management:
+  - scrum:
+    name: SCRUM
+    level: 5
+  - agile:
+    name: Agile
+    level: 5

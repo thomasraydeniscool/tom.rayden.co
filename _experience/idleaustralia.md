@@ -1,8 +1,0 @@
-- Angular.io
-- React
-- Vue
-- Electron
-- MongoDB
-- Express.js
-- Socket.io
-- Devops...
