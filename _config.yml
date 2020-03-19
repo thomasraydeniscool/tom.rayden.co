@@ -25,3 +25,5 @@ title: 'Thomas Rayden' # the name of your site, e.g. ACME Corp.
 
 collections:
   - experience
+  - startups
+  - opensource

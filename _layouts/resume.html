@@ -69,7 +69,7 @@
 
           <h1 class="title">Bio</h1>
 
-          <p></p>
+          <p>{{ content }}</p>
 
         </div>
         
@@ -77,17 +77,33 @@
 
           <h1 class="title">Skills</h1>
 
+          {% for skill in site.data.skills %}
+          <h2>{{ skill.name }}</h2>
+          {% endfor %}
+
         </div>
 
         <div class="experience">
 
           <h1 class="title">Experience</h1>
 
+          {% for experience in site.experience %}
+          <h2>{{ experience.name }}</h2>
+          {% endfor %}
+
         </div>
 
         <div class="projects">
 
           <h1 class="title">Projects</h1>
+
+          {% for project in site.startups %}
+          <h2>{{ project.title }}</h2>
+          {% endfor %}
+
+          {% for project in site.opensource %}
+          <h2>{{ project.title }}</h2>
+          {% endfor %}
 
         </div>
 
