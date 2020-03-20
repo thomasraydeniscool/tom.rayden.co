@@ -1,115 +1,146 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'en-US' }}">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
     <title>{{ site.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-    <link rel="stylesheet" href="{{ "/assets/css/paper.css" | relative_url }}">
-    <link rel="stylesheet" href="{{ "/assets/css/resume.css" | relative_url }}">
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/paper.css' | relative_url }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/resume.css' | relative_url }}"
+    />
   </head>
 
-  <!-- Set "A5", "A4" or "A3" for class name -->
-  <!-- Set also "landscape" if you need -->
   <body class="A4">
-    
-    <!-- Each sheet element should have the class "sheet" -->
-    <!-- "padding-**mm" is optional: you can set 10, 15, 20 or 25 -->
     <section class="sheet padding-10mm">
+      <section>
+        <div>
+          <h1>{{ page.title }}</h1>
+        </div>
 
-      <!-- Write HTML just like a web page -->
-      <article>
-
-        <div class="top">
-
-          <div class="header-section">
-            <h1 class="header">{{ page.title }}</h1>
+        <div>
+          <div>
+            <span>
+              Mobile:
+            </span>
+            <span>
+              {{ page.mobile }}
+            </span>
           </div>
+          <div>
+            <span>
+              Email:
+            </span>
+            <span>
+              {{ page.email }}
+            </span>
+          </div>
+          <div>
+            <span>
+              Website:
+            </span>
+            <span>
+              {{ page.website }}
+            </span>
+          </div>
+          <div>
+            <span>
+              Location:
+            </span>
+            <span>
+              {{ page.location }}
+            </span>
+          </div>
+        </div>
+      </section>
+      <div class="columns">
+        <div class="column is-1">
+          <div class="skills">
+            <h1>Skills</h1>
 
-          <div class="details-section">
+            <h4>Languages</h4>
             <ul>
-              <li>
-                <span>
-                  Mobile:
-                </span>
-                <span>
-                  {{ page.mobile }}
-                </span>
-              </li>
-              <li>
-                <span>
-                  Email:
-                </span>
-                <span>
-                  {{ page.email }}
-                </span>
-              </li>
-              <li>
-                <span>
-                  Website:
-                </span>
-                <span>
-                  {{ page.website }}
-                </span>
-              </li>
-              <li>
-                <span>
-                  Location:
-                </span>
-                <span>
-                  {{ page.location }}
-                </span>
-              </li>
+              {% for skill in site.data.resume.skills.languages %}
+              <li>{{ skill.name }}</li>
+              {% endfor %}
+            </ul>
+
+            <h4>Frameworks</h4>
+            <ul>
+              {% for skill in site.data.resume.skills.frameworks %}
+              <li>{{ skill.name }}</li>
+              {% endfor %}
+            </ul>
+
+            <h4>Infrastructure</h4>
+            <ul>
+              {% for skill in site.data.resume.skills.infrastructure %}
+              <li>{{ skill.name }}</li>
+              {% endfor %}
             </ul>
           </div>
-
         </div>
+        <div class="column">
+          <section class="section">
+            <h1>Bio</h1>
 
-        <div class="bio">
+            <p>{{ content }}</p>
+          </section>
 
-          <h1 class="title">Bio</h1>
+          <section class="section">
+            <h1>Experience</h1>
 
-          <p>{{ content }}</p>
-
+            {% for experience in site.experience %}
+            <div class="media">
+              <div class="media-left">
+                <div class="thumbnail">
+                  <img src="assets/{{experience.image}}" />
+                </div>
+              </div>
+              <div class="media-content">
+                <h2>{{ experience.name }}</h2>
+                <p>{{ experience.period }}</p>
+              </div>
+            </div>
+            <div class="experience-content">
+              {{ experience.content }}
+            </div>
+            {% endfor %}
+          </section>
         </div>
-        
-        <div class="skills">
-
-          <h1 class="title">Skills</h1>
-
-          {% for skill in site.data.skills %}
-          <h2>{{ skill.name }}</h2>
-          {% endfor %}
-
-        </div>
-
-        <div class="experience">
-
-          <h1 class="title">Experience</h1>
-
-          {% for experience in site.experience %}
-          <h2>{{ experience.name }}</h2>
-          {% endfor %}
-
-        </div>
-
-        <div class="projects">
-
-          <h1 class="title">Projects</h1>
-
-          {% for project in site.startups %}
-          <h2>{{ project.title }}</h2>
-          {% endfor %}
-
-          {% for project in site.opensource %}
-          <h2>{{ project.title }}</h2>
-          {% endfor %}
-
-        </div>
-
-      </article>
-
+      </div>
     </section>
 
+    <section class="sheet padding-10mm">
+      <section class="section">
+        <h1>Personal Projects</h1>
+
+        <div class="columns">
+          <div class="column">
+            <h2>Startups</h2>
+            {% for project in site.startups %}
+            <h3>{{ project.title }}</h3>
+            {% endfor %}
+          </div>
+          <div class="column">
+            <h2>Open Source</h2>
+            {% for project in site.opensource %}
+            <h3>{{ project.title }}</h3>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h1>References</h1>
+
+        {% for reference in site.data.resume.references %}
+        <li>{{ reference.name }}</li>
+        {% endfor %}
+      </section>
+    </section>
   </body>
 </html>

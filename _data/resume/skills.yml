@@ -1,159 +1,111 @@
 languages:
-  - typescript:
-    name: Typescript
+  - name: Typescript
     level: 10
-  - python:
-    name: Python
+  - name: Python
     level: 4
-  - java:
-    name: Java
+  - name: Java
     level: 5
-  - rust:
-    name: Rust
+  - name: Rust
     level: 4
-  - go:
-    name: Go
+  - name: Go
     level: 3
-  - csharp:
-    name: C#
+  - name: C#
     level: 3
-  - php:
-    name: PHP
+  - name: PHP
     level: 5
-  - json:
-    name: JSON
+  - name: JSON
     level: 10
-  - yaml:
-    name: YAML
+  - name: YAML
     level: 6
-  - sass:
-    name: Sass
+  - name: Sass
     level: 10
-  - html:
-    name: HTML
+  - name: HTML
     level: 10
-  - markdown:
-    name: Markdown
+  - name: Markdown
     level: 10
 
 frameworks:
-  - node:
-    name: Node
+  - name: Node
     level: 10
-  - vue:
-    name: Vue
+  - name: Vue
     level: 10
-  - nuxt:
-    name: Nuxt
+  - name: Nuxt
     level: 9
-  - react:
-    name: React
+  - name: React
     level: 7
-  - angular:
-    name: Angular
+  - name: Angular
     level: 8
-  - express:
-    name: Express
+  - name: Express
     level: 10
-  - fastify:
-    name: Fastify
+  - name: Fastify
     level: 7
-  - electron:
-    name: Electron
+  - name: Electron
     level: 10
-  - jekyll:
-    name: Jekyll
+  - name: Jekyll
     level: 6
-  - django:
-    name: Django
+  - name: Django
     level: 4
-  - wordpress:
-    name: Wordpress
+  - name: Wordpress
     level: 6
 
 infrastructure:
-  - git:
-    name: Git
+  - name: Git
     level: 10
-  - mongodb:
-    name: MongoDB
+  - name: MongoDB
     level: 10
-  - docker:
-    name: Docker
+  - name: Docker
     level: 5
-  - lambda:
-    name: Lambda
+  - name: Lambda
     level: 5
-  - s3:
-    name: S3
+  - name: S3
     level: 9
-  - redisdb:
-    name: RedisDB
+  - name: RedisDB
     level: 3
-  - dynamodb:
-    name: DynamoDB
+  - name: DynamoDB
     level: 3
-  - postgresql:
-    name: PostgreSQL
+  - name: PostgreSQL
     level: 1
 
 services:
-  - heroku:
-    name: Heroku
+  - name: Heroku
     level: 10
-  - twillio:
-    name: Twillio
+  - name: Twillio
     level: 10
-  - sendgrid:
-    name: Sendgrid
+  - name: Sendgrid
     level: 8
-  - auth0:
-    name: Auth0
+  - name: Auth0
     level: 8
-  - sentry:
-    name: Sentry
+  - name: Sentry
     level: 9
-  - github:
-    name: Github
+  - name: Github
     level: 10
 
 standards:
-  - rest:
-    name: REST
+  - name: REST
     level: 10
-  - graphql:
-    name: GraphQL
+  - name: GraphQL
     level: 7
-  - oauth:
-    name: OAuth & OpenID Connect
+  - name: OAuth & OpenID Connect
     level: 9
-  - openapi:
-    name: OpenAPI
+  - name: OpenAPI
     level: 8
 
 integrations:
-  - xero:
-    name: Xero
+  - name: Xero
     level: 7
-  - myob:
-    name: MYOB
+  - name: MYOB
     level: 6
 
 systems:
-  - bash:
-    name: Bash
+  - name: Bash
     level: 5
-  - ssh:
-    name: ssh
+  - name: ssh
     level: 7
-  - linux:
-    name: Linux
+  - name: Linux
     level: 8
 
 management:
-  - scrum:
-    name: SCRUM
+  - name: SCRUM
     level: 5
-  - agile:
-    name: Agile
+  - name: Agile
     level: 5
