@@ -91,10 +91,12 @@
       level: 10
     - name: GraphQL
       level: 7
-    - name: OAuth & OpenID Connect
+    - name: OAuth
       level: 9
-    - name: OpenAPI
+    - name: OpenID Connect
       level: 8
+    - name: OpenAPI
+      level: 7
 
 - name: Systems
   hide: true

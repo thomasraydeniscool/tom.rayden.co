@@ -23,37 +23,50 @@
               <h1 class="name">{{ page.fullname }}</h1>
             </div>
 
-            <div>
-              <div>
-                <span>
-                  <a href="tel:+{{page.mobile}}">
+            <div class="columns">
+              <div class="column">
+                <div>
+                  <span>
+                    <a href="//{{page.website}}">
+                      {{ page.website }}
+                    </a>
+                  </span>
+                </div>
+                <div>
+                  <span>
                     {{ page.mobile }}
-                  </a>
-                </span>
-              </div>
-              <div>
-                <span>
-                  <a href="mailto:{{page.email}}">
+                  </span>
+                </div>
+                <div>
+                  <span>
                     {{ page.email }}
-                  </a>
-                </span>
+                  </span>
+                </div>
+                <div>
+                  <span>
+                    {{ page.location }}
+                  </span>
+                </div>
               </div>
-              <div>
-                <span>
-                  <a href="//{{page.website}}">
-                    {{ page.website }}
-                  </a>
-                </span>
-              </div>
-              <div>
-                <span>
-                  {{ page.location }}
-                </span>
+              <div class="column">
+                {% for social in site.data.resume.socials %}
+                <div>
+                  <span>
+                    <a href="{{ social.externalUrl }}" target="_blank"
+                      >{{ social.name }}</a
+                    >
+                  </span>
+                </div>
+                {% endfor %}
               </div>
             </div>
           </div>
           <div class="right">
-            <a href="https://github.com/thomasraydeniscool/tom.rayden.co">
+            <a
+              href="https://github.com/thomasraydeniscool/tom.rayden.co"
+              target="_blank"
+              title="This resume is open source!"
+            >
               <span>View Source</span>
             </a>
           </div>
@@ -67,7 +80,7 @@
             {% for category in site.data.resume.skills %} {% if category.hide !=
             true %}
             <div class="skills-category">
-              <h4>{{ category.name }}</h4>
+              <h3>{{ category.name }}</h3>
               {% assign skills = category.items | sort: 'level' | reverse %} {%
               for skill in skills %}
               <span>
@@ -81,7 +94,7 @@
         </div>
         <div class="column">
           <section class="section">
-            <div class="boi">
+            <div class="bio">
               <h1>Bio</h1>
 
               <div class="bio-content">
@@ -91,32 +104,34 @@
           </section>
 
           <section class="section">
-            <h1>Experience</h1>
+            <div class="experience">
+              <h1>Experience</h1>
 
-            {% assign experience = site.experience | sort: 'order' %} {% for
-            item in experience %}
-            <div class="experience-item">
-              <div class="media">
-                {% if item.image %}
-                <div class="media-left">
-                  <div class="thumbnail">
-                    <img src="assets/{{item.image}}" />
+              {% assign experience = site.experience | sort: 'order' %} {% for
+              item in experience %}
+              <div class="experience-item">
+                <div class="media">
+                  {% if item.image %}
+                  <div class="media-left">
+                    <div class="thumbnail">
+                      <img src="assets/{{item.image}}" />
+                    </div>
+                  </div>
+                  {% endif %}
+                  <div class="media-content">
+                    <h2 class="experience-item-title">
+                      <span class="bold">{{ item.name }}&nbsp;/</span>
+                      <span>{{ item.position }}</span>
+                    </h2>
+                    <p>{{ item.period }}, {{ item.location }}</p>
                   </div>
                 </div>
-                {% endif %}
-                <div class="media-content">
-                  <h2>
-                    <span class="bold">{{ item.name }}&nbsp;/</span>
-                    <span>{{ item.position }}</span>
-                  </h2>
-                  <p>{{ item.period }}, {{ item.location }}</p>
+                <div class="experience-item-content">
+                  {{ item.content }}
                 </div>
               </div>
-              <div class="experience-item-content">
-                {{ item.content }}
-              </div>
+              {% endfor %}
             </div>
-            {% endfor %}
           </section>
         </div>
       </div>
@@ -130,28 +145,62 @@
 
             <div class="columns">
               <div class="column">
-                <h2>Startups</h2>
-                {% for project in site.startups %}
-                <h3>{{ project.title }}</h3>
-                {% endfor %}
+                <div class="projects">
+                  <h2>Startups</h2>
+                  {% for project in site.startups %}
+                  <div class="projects-item">
+                    <h3>
+                      {% if project.externalUrl %}
+                      <a href="{{project.externalUrl}}" target="_blank"
+                        >{{ project.title }}</a
+                      >
+                      {% else %}
+                      <span>{{ project.title }}</span>
+                      {% endif %}
+                    </h3>
+                    <p>{{ project.content }}</p>
+                  </div>
+                  {% endfor %}
+                </div>
               </div>
               <div class="column">
-                <h2>Open Source</h2>
-                {% for project in site.opensource %}
-                <h3>{{ project.title }}</h3>
-                {% endfor %}
+                <div class="projects">
+                  <h2>Open Source</h2>
+                  {% for project in site.opensource %}
+                  <div class="projects-item">
+                    <h3>
+                      {% if project.externalUrl %}
+                      <a href="{{project.externalUrl}}" target="_blank"
+                        >{{ project.title }}</a
+                      >
+                      {% else %}
+                      <span>{{ project.title }}</span>
+                      {% endif %}
+                    </h3>
+                    <p>{{ project.content }}</p>
+                  </div>
+                  {% endfor %}
+                </div>
               </div>
             </div>
           </section>
 
           <section class="section">
-            <h1>References</h1>
+            <div class="references">
+              <h1>References</h1>
 
-            <ul>
               {% for reference in site.data.resume.references %}
-              <li>{{ reference.name }}, {{ reference.mobile }}</li>
+              <div class="references-item">
+                <h3>{{ reference.name }}</h3>
+                <div>
+                  <span>{{ reference.mobile }}</span>
+                </div>
+                <div>
+                  <span>{{ reference.email }}</span>
+                </div>
+              </div>
               {% endfor %}
-            </ul>
+            </div>
           </section>
         </div>
       </div>
