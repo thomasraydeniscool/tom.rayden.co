@@ -4,6 +4,7 @@ position: "Mentor"
 location: "Perth, WA"
 period: "Nov 2019 - Dec 2019"
 image: logos/shecodes.png
+order: 1
 ---
 
 Mentoring at SheCodes was a great opportunity as it allowed me to support interested like minded females who wanted to learn about programming.

@@ -1,9 +1,10 @@
 ---
 name: "Idle Australia"
-title: "Co-Founder & CTO"
+position: "Co-Founder & CTO"
 location: "Perth, WA"
 period: "Dec 2017 - March 2020"
 image: logos/idleaustralia.png
+order: 0
 ---
 
 During my time at Idle Australia I had a wide range of responsibilities and I was required to adapt, problem solve, and overcome many challenges.

@@ -1,111 +1,114 @@
-languages:
-  - name: Typescript
-    level: 10
-  - name: Python
-    level: 4
-  - name: Java
-    level: 5
-  - name: Rust
-    level: 4
-  - name: Go
-    level: 3
-  - name: C#
-    level: 3
-  - name: PHP
-    level: 5
-  - name: JSON
-    level: 10
-  - name: YAML
-    level: 6
-  - name: Sass
-    level: 10
-  - name: HTML
-    level: 10
-  - name: Markdown
-    level: 10
+- name: Languages
+  items:
+    - name: Typescript
+      level: 11
+    - name: Python
+      level: 4
+    - name: Java
+      level: 5
+    - name: Rust
+      level: 4
+    - name: Go
+      level: 3
+    - name: C#
+      level: 3
+    - name: PHP
+      level: 5
+    - name: JSON
+      level: 9
+    - name: YAML
+      level: 6
+    - name: Sass
+      level: 9
+    - name: HTML
+      level: 9
+    - name: Markdown
+      level: 9
 
-frameworks:
-  - name: Node
-    level: 10
-  - name: Vue
-    level: 10
-  - name: Nuxt
-    level: 9
-  - name: React
-    level: 7
-  - name: Angular
-    level: 8
-  - name: Express
-    level: 10
-  - name: Fastify
-    level: 7
-  - name: Electron
-    level: 10
-  - name: Jekyll
-    level: 6
-  - name: Django
-    level: 4
-  - name: Wordpress
-    level: 6
+- name: Frameworks
+  items:
+    - name: Node
+      level: 11
+    - name: Vue
+      level: 11
+    - name: Nuxt
+      level: 9
+    - name: React
+      level: 7
+    - name: Angular
+      level: 8
+    - name: Express
+      level: 11
+    - name: Fastify
+      level: 7
+    - name: Electron
+      level: 10
+    - name: Jekyll
+      level: 6
+    - name: Django
+      level: 4
+    - name: Wordpress
+      level: 6
 
-infrastructure:
-  - name: Git
-    level: 10
-  - name: MongoDB
-    level: 10
-  - name: Docker
-    level: 5
-  - name: Lambda
-    level: 5
-  - name: S3
-    level: 9
-  - name: RedisDB
-    level: 3
-  - name: DynamoDB
-    level: 3
-  - name: PostgreSQL
-    level: 1
+- name: Infrastructure
+  items:
+    - name: Git
+      level: 10
+    - name: MongoDB
+      level: 10
+    - name: Docker
+      level: 5
+    - name: Lambda
+      level: 5
+    - name: S3
+      level: 9
+    - name: RedisDB
+      level: 3
+    - name: DynamoDB
+      level: 3
+    - name: PostgreSQL
+      level: 1
 
-services:
-  - name: Heroku
-    level: 10
-  - name: Twillio
-    level: 10
-  - name: Sendgrid
-    level: 8
-  - name: Auth0
-    level: 8
-  - name: Sentry
-    level: 9
-  - name: Github
-    level: 10
+- name: Services
+  hide: true
+  items:
+    - name: Heroku
+      level: 10
+    - name: Twillio
+      level: 10
+    - name: Sendgrid
+      level: 8
+    - name: Auth0
+      level: 8
+    - name: Sentry
+      level: 9
+    - name: Github
+      level: 10
 
-standards:
-  - name: REST
-    level: 10
-  - name: GraphQL
-    level: 7
-  - name: OAuth & OpenID Connect
-    level: 9
-  - name: OpenAPI
-    level: 8
+- name: Standards
+  items:
+    - name: REST
+      level: 10
+    - name: GraphQL
+      level: 7
+    - name: OAuth & OpenID Connect
+      level: 9
+    - name: OpenAPI
+      level: 8
 
-integrations:
-  - name: Xero
-    level: 7
-  - name: MYOB
-    level: 6
+- name: Systems
+  hide: true
+  items:
+    - name: Bash
+      level: 5
+    - name: ssh
+      level: 7
+    - name: Linux
+      level: 8
 
-systems:
-  - name: Bash
-    level: 5
-  - name: ssh
-    level: 7
-  - name: Linux
-    level: 8
-
-management:
-  - name: SCRUM
-    level: 5
-  - name: Agile
-    level: 5
+- name: Management
+  items:
+    - name: SCRUM
+      level: 5
+    - name: Agile
+      level: 5

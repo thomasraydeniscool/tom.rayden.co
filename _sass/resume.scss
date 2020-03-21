@@ -1,21 +1,13 @@
+@import "./reset.scss";
+
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap");
+
+$link-color: royalblue;
 
 html {
   font-family: "Noto Sans", sans-serif;
   font-size: 12px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-p {
-  margin: 0;
+  color: #333333;
 }
 
 h1 {
@@ -23,12 +15,35 @@ h1 {
   font-size: 1.2em;
   margin-bottom: 1rem;
 }
+
 h2 {
   font-size: 1.4em;
 }
 
+h4 {
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+a {
+  color: $link-color;
+  font-size: 1.1em;
+  &:visited {
+    color: $link-color;
+  }
+  &:hover {
+    background-color: $link-color;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
 .section {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .thumbnail {
@@ -49,10 +64,11 @@ h2 {
   flex-direction: row;
   & > .column {
     display: block;
-    padding: 1.5rem;
-    @for $i from 1 through 4 {
-      &.is-#{$i} {
-        width: percentage($i / 4);
+    padding: 0 2rem;
+    flex: 1;
+    @for $i from 1 through 12 {
+      &.is-#{$i}-12 {
+        width: percentage($i / 12);
         flex: none;
       }
     }
@@ -63,6 +79,7 @@ h2 {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 1rem;
   & > &-left {
     margin-right: 1rem;
   }
@@ -72,6 +89,34 @@ h2 {
   }
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+  & > .left {
+    text-align: left;
+    flex: 1;
+  }
+  & > .right {
+    text-align: right;
+    flex: 1;
+  }
+}
+
 .skills {
   text-align: right;
+  &-category {
+    margin-bottom: 0.4rem;
+  }
+}
+
+.experience {
+  &-item {
+    margin-bottom: 2rem;
+  }
+}
+
+.name {
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
 }

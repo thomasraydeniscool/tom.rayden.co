@@ -16,97 +16,105 @@
 
   <body class="A4">
     <section class="sheet padding-10mm">
-      <section>
-        <div>
-          <h1>{{ page.title }}</h1>
-        </div>
+      <section class="section">
+        <div class="header">
+          <div class="left">
+            <div>
+              <h1 class="name">{{ page.fullname }}</h1>
+            </div>
 
-        <div>
-          <div>
-            <span>
-              Mobile:
-            </span>
-            <span>
-              {{ page.mobile }}
-            </span>
+            <div>
+              <div>
+                <span>
+                  <a href="tel:+{{page.mobile}}">
+                    {{ page.mobile }}
+                  </a>
+                </span>
+              </div>
+              <div>
+                <span>
+                  <a href="mailto:{{page.email}}">
+                    {{ page.email }}
+                  </a>
+                </span>
+              </div>
+              <div>
+                <span>
+                  <a href="//{{page.website}}">
+                    {{ page.website }}
+                  </a>
+                </span>
+              </div>
+              <div>
+                <span>
+                  {{ page.location }}
+                </span>
+              </div>
+            </div>
           </div>
-          <div>
-            <span>
-              Email:
-            </span>
-            <span>
-              {{ page.email }}
-            </span>
-          </div>
-          <div>
-            <span>
-              Website:
-            </span>
-            <span>
-              {{ page.website }}
-            </span>
-          </div>
-          <div>
-            <span>
-              Location:
-            </span>
-            <span>
-              {{ page.location }}
-            </span>
+          <div class="right">
+            <a href="https://github.com/thomasraydeniscool/tom.rayden.co">
+              <span>View Source</span>
+            </a>
           </div>
         </div>
       </section>
+
       <div class="columns">
-        <div class="column is-1">
+        <div class="column is-3-12">
           <div class="skills">
             <h1>Skills</h1>
-
-            <h4>Languages</h4>
-            <ul>
-              {% for skill in site.data.resume.skills.languages %}
-              <li>{{ skill.name }}</li>
+            {% for category in site.data.resume.skills %} {% if category.hide !=
+            true %}
+            <div class="skills-category">
+              <h4>{{ category.name }}</h4>
+              {% assign skills = category.items | sort: 'level' | reverse %} {%
+              for skill in skills %}
+              <span>
+                <span>{{ skill.name }}</span>{% if forloop.last == false
+                %}<span>,</span>{% endif %}
+              </span>
               {% endfor %}
-            </ul>
-
-            <h4>Frameworks</h4>
-            <ul>
-              {% for skill in site.data.resume.skills.frameworks %}
-              <li>{{ skill.name }}</li>
-              {% endfor %}
-            </ul>
-
-            <h4>Infrastructure</h4>
-            <ul>
-              {% for skill in site.data.resume.skills.infrastructure %}
-              <li>{{ skill.name }}</li>
-              {% endfor %}
-            </ul>
+            </div>
+            {% endif %} {% endfor %}
           </div>
         </div>
         <div class="column">
           <section class="section">
-            <h1>Bio</h1>
+            <div class="boi">
+              <h1>Bio</h1>
 
-            <p>{{ content }}</p>
+              <div class="bio-content">
+                <p>{{ content }}</p>
+              </div>
+            </div>
           </section>
 
           <section class="section">
             <h1>Experience</h1>
 
-            {% for experience in site.experience %}
-            <div class="media">
-              <div class="media-left">
-                <div class="thumbnail">
-                  <img src="assets/{{experience.image}}" />
+            {% assign experience = site.experience | sort: 'order' %} {% for
+            item in experience %}
+            <div class="experience-item">
+              <div class="media">
+                {% if item.image %}
+                <div class="media-left">
+                  <div class="thumbnail">
+                    <img src="assets/{{item.image}}" />
+                  </div>
+                </div>
+                {% endif %}
+                <div class="media-content">
+                  <h2>
+                    <span class="bold">{{ item.name }}&nbsp;/</span>
+                    <span>{{ item.position }}</span>
+                  </h2>
+                  <p>{{ item.period }}, {{ item.location }}</p>
                 </div>
               </div>
-              <div class="media-content">
-                <h2>{{ experience.name }}</h2>
-                <p>{{ experience.period }}</p>
+              <div class="experience-item-content">
+                {{ item.content }}
               </div>
-            </div>
-            <div class="experience-content">
-              {{ experience.content }}
             </div>
             {% endfor %}
           </section>
@@ -115,32 +123,38 @@
     </section>
 
     <section class="sheet padding-10mm">
-      <section class="section">
-        <h1>Personal Projects</h1>
+      <div class="columns">
+        <div class="column">
+          <section class="section">
+            <h1>Personal Projects</h1>
 
-        <div class="columns">
-          <div class="column">
-            <h2>Startups</h2>
-            {% for project in site.startups %}
-            <h3>{{ project.title }}</h3>
-            {% endfor %}
-          </div>
-          <div class="column">
-            <h2>Open Source</h2>
-            {% for project in site.opensource %}
-            <h3>{{ project.title }}</h3>
-            {% endfor %}
-          </div>
+            <div class="columns">
+              <div class="column">
+                <h2>Startups</h2>
+                {% for project in site.startups %}
+                <h3>{{ project.title }}</h3>
+                {% endfor %}
+              </div>
+              <div class="column">
+                <h2>Open Source</h2>
+                {% for project in site.opensource %}
+                <h3>{{ project.title }}</h3>
+                {% endfor %}
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h1>References</h1>
+
+            <ul>
+              {% for reference in site.data.resume.references %}
+              <li>{{ reference.name }}, {{ reference.mobile }}</li>
+              {% endfor %}
+            </ul>
+          </section>
         </div>
-      </section>
-
-      <section class="section">
-        <h1>References</h1>
-
-        {% for reference in site.data.resume.references %}
-        <li>{{ reference.name }}</li>
-        {% endfor %}
-      </section>
+      </div>
     </section>
   </body>
 </html>
