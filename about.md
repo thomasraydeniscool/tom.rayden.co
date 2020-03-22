@@ -1,5 +1,6 @@
 ---
-layout: default
-title: Thomas Rayden
-subtitle: Stuff About Me
+layout: page
+title: About
 ---
+
+I am a software engineer living in Perth, WA.

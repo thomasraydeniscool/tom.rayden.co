@@ -1,5 +1,6 @@
 ---
-layout: default
-title: Thomas Rayden
-subtitle: My Contact Details
+layout: page
+title: Contact
 ---
+
+See my [resume](/resume).

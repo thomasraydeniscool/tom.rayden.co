@@ -1,0 +1,11 @@
+.home {
+  &-title {
+    font-size: 3em;
+    text-transform: uppercase;
+  }
+  &-nav {
+    li {
+      margin: 5px 0;
+    }
+  }
+}

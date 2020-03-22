@@ -3,13 +3,14 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>{{ site.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/default.css" | relative_url }}">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/default.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/page.css' | relative_url }}">
   </head>
   <body>
     <div class="container">
+      <a href="/">&larr; Back</a>
       <h1>{{ page.title }}</h1>
-      <h3>{{ page.subtitle }}</h3>
       {{ content }}
     </div>
   </body>
