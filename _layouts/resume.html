@@ -84,8 +84,9 @@
               {% assign skills = category.items | sort: 'level' | reverse %} {%
               for skill in skills %}
               <span>
-                <span>{{ skill.name }}</span>{% if forloop.last == false
-                %}<span>,</span>{% endif %}
+                <span {% if skill.level
+                  >= 10 %}class="emphasis"{% endif %}>{{ skill.name }}</span
+                >{% if forloop.last == false %}<span>,</span>{% endif %}
               </span>
               {% endfor %}
             </div>

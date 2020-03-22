@@ -58,6 +58,10 @@ a {
   display: block;
 }
 
+.emphasis {
+  color: #000000;
+}
+
 .thumbnail {
   width: 3rem;
   height: 3rem;
@@ -115,7 +119,7 @@ a {
 }
 
 .name {
-  color: #000;
+  color: #000000;
   font-weight: bold;
   margin-bottom: 0.2rem;
 }
