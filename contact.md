@@ -3,4 +3,4 @@ layout: page
 title: Contact
 ---
 
-See my [resume](/resume).
+*Work in progress*
