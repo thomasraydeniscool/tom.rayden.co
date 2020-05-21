@@ -6,4 +6,6 @@ period: "Dec 2016 - Dec 2017"
 order: 2
 ---
 
+*Work in progress*
+
 During my time freelancing I was given the opportunity to experience managing projects by myself, setting client expectations, and then delivering on clients needs and expectations.
