@@ -1,7 +1,8 @@
 ---
 layout: resume
 fullname: "Thomas Rayden"
-website: "tom.rayden.co"
+websiteUrl: "https://tom.rayden.co"
+contactUrl: "https://tom.rayden.co/contact"
 location: "Perth, WA"
 ---
 
