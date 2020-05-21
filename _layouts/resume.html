@@ -31,18 +31,17 @@
                   </span>
                 </div>
                 <div>
-                  <span>
-                    <a href="//{{page.websiteUrl}}">
-                      {{ page.website }}
-                    </a>
-                  </span>
+                  <a href="{{page.websiteUrl}}">
+                    {{ page.website }}
+                  </a>
                 </div>
                 <div>
-                  <a href="//{{page.contactUrl}}">
+                  <a href="{{page.contactUrl}}">
                     <strong>Contact me</strong>
                   </a>
                 </div>
               </div>
+              
               <div class="column">
                 {% for social in site.data.resume.socials %}
                 <div>
