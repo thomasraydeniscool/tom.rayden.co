@@ -7,10 +7,4 @@ website: "tom.rayden.co"
 location: "Perth, WA"
 ---
 
-I am an extremely passionate software architect.
-
-- problem solver
-- pride in work
-- contribute to open source
-- dreamer
-- enjoy making people lives better
+*Work in progress*
